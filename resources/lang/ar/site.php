@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'dashboard' => 'الرئيسيه',
+    'dashboard' => 'الرئيسية',
     'logout' => 'تسجيل الخروج',
 
     'add' => 'اضف',
-    'create' => 'اضافه',
+    'create' => 'اضافة',
     'read' => 'عرض',
     'edit' => 'تعديل',
     'update' => 'تعديل',
@@ -21,10 +21,10 @@ return [
 
     'login' => 'تسجيل الدخول',
     'remember_me' => 'تذكرني',
-    'password' => 'كلمه المرور',
-    'password_confirmation' => 'تاكيد كلمه المرور',
+    'password' => 'كلمة المرور',
+    'password_confirmation' => 'تاكيد كلمة المرور',
 
-    'added_successfully' => 'تم اضافه البيانات بنجاح',
+    'added_successfully' => 'تم اضافة البيانات بنجاح',
     'updated_successfully' => 'تم تعديل البيانات بنجاح',
     'deleted_successfully' => 'تم حذف البيانات بنجاح',
 
@@ -35,17 +35,17 @@ return [
     'client_name' => 'اسم العميل',
     'phone' => 'التلفون',
     'address' => 'العنوان',
-    'previous_orders' => 'الطلبات السابقه',
+    'previous_orders' => 'الطلبات السابقة',
     'orders' => 'الطلبات',
     'add_order' => 'اضف طلب',
     'edit_order' => 'تعديل طلب',
 
-    'users' => 'المشرفين',
+    'users' => 'المستخدمين',
     'first_name' => 'الاسم الاول',
     'last_name' => 'الاسم الاخير',
     'email' => 'البريد الالكتروني',
     'status' => 'الحالة',
-    'image' => 'صوره',
+    'image' => 'صورة',
     'active' => 'مفعل',
     'not_active' => 'غير مفعل',
     'action' => 'اكشن',
@@ -57,14 +57,14 @@ return [
     'name' => 'الاسم',
     'description' => 'الوصف',
     'products_count' => 'عدد الامنتجات',
-    'related_products' => 'المنتجات المرتبطه',
+    'related_products' => 'المنتجات المرتبطة',
     'category' => 'القسم',
     'show_products' => 'عرض المنتجات',
     'created_at' => 'تم اضافته',
 
     'products' => 'المنتجات',
     'product' => 'المنتج',
-    'quantity' => 'الكميه',
+    'quantity' => 'الكمية',
     'total' => 'المجموع',
     'purchase_price' => 'سعر الشراء',
     'price' => 'السعر',
@@ -73,13 +73,13 @@ return [
     'profit_percent' => 'المكسب',
 
     'ar' => [
-        'name' => 'الاسم بالغه العربيه',
-        'description' => 'الوصف بالغه العربيه',
+        'name' => 'الاسم بالغة العربية',
+        'description' => 'الوصف بالغة العربية',
     ],
 
     'en' => [
-        'name' => 'الاسم بالغه الانجليزيه',
-        'description' => 'الوصف بالغه الانجليزيه',
+        'name' => 'الاسم بالغة الانجليزية',
+        'description' => 'الوصف بالغة الانجليزية',
     ],
 
 ];

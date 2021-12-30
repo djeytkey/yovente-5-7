@@ -33,12 +33,14 @@
                                 <div class="box-tools">
 
                                     <div class="input-group input-group-sm">
-                                        
-                                        <input type="text" name="search" class="form-control" placeholder="@lang('site.search')">
+
+                                        <input type="text" name="search" class="form-control"
+                                            placeholder="@lang('site.search')">
 
                                         <div class="input-group-btn">
 
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                            <button type="submit" class="btn btn-primary"><i
+                                                    class="fa fa-search"></i></button>
 
                                         </div>
 
@@ -50,7 +52,8 @@
 
                             <div class="col-md-4">
 
-                                <a href="{{ route('dashboard.users.create') }}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> @lang('site.add')</a>
+                                <a href="{{ route('dashboard.users.create') }}" class="btn btn-primary btn-sm"><i
+                                        class="fa fa-plus"></i> @lang('site.add')</a>
 
                             </div>
 
@@ -87,7 +90,7 @@
                                         <td>{{ $user->last_name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->phone }}</td>
-                                        @if ($user->is = 1)
+                                        @if ($user->is_active == 1)
                                             <td><span class="label label-success">@lang('site.active')</span></td>
                                         @else
                                             <td><span class="label label-danger">@lang('site.not_active')</span></td>

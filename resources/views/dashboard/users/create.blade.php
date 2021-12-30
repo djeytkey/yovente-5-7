@@ -85,11 +85,8 @@
                                 </div> --}}
         
                                 <div class="form-group">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="flat-red" name="is_active" value="1" checked> @lang('site.active')
-                                        </label>
-                                    </div>
+                                    <input type="checkbox" class="flat-red" name="is_active" value="1" checked>
+                                    <label for="is_active"> @lang('site.active')</label>
                                 </div>
 
                             </div>
