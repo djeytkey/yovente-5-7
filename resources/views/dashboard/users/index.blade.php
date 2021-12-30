@@ -24,49 +24,98 @@
 
                 <div class="box-header with-border">
 
-                    <h3 class="box-title">@lang('site.users')</h3>
+                    <form action="">
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+
+                                <div class="box-tools">
+
+                                    <div class="input-group input-group-sm">
+                                        
+                                        <input type="text" name="search" class="form-control" placeholder="@lang('site.search')">
+
+                                        <div class="input-group-btn">
+
+                                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <a href="{{ route('dashboard.users.create') }}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> @lang('site.add')</a>
+
+                            </div>
+
+                        </div>
+
+                    </form>
 
                 </div>
 
                 <div class="box-body">
 
-                    <table class="table table-hover">
-                        <tr>
-                            <th>ID</th>
-                            <th>User</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Reason</th>
-                        </tr>
-                        <tr>
-                            <td>183</td>
-                            <td>John Doe</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-success">Approved</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        </tr>
-                        <tr>
-                            <td>219</td>
-                            <td>Alexander Pierce</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-warning">Pending</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        </tr>
-                        <tr>
-                            <td>657</td>
-                            <td>Bob Doe</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-primary">Approved</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        </tr>
-                        <tr>
-                            <td>175</td>
-                            <td>Mike Doe</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-danger">Denied</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        </tr>
-                    </table>
+                    @if ($users->count() > 0)
+
+                        <table class="table table-bordered table-hover">
+
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>@lang('site.first_name')</th>
+                                    <th>@lang('site.last_name')</th>
+                                    <th>@lang('site.email')</th>
+                                    <th>@lang('site.phone')</th>
+                                    <th>@lang('site.status')</th>
+                                    <th>@lang('site.action')</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach ($users as $index => $user)
+
+                                    <tr>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $user->first_name }}</td>
+                                        <td>{{ $user->last_name }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->phone }}</td>
+                                        @if ($user->is = 1)
+                                            <td><span class="label label-success">@lang('site.active')</span></td>
+                                        @else
+                                            <td><span class="label label-danger">@lang('site.not_active')</span></td>
+                                        @endif
+                                        <td>
+                                            <a class="btn btn-sm btn-info"
+                                                href="{{ route('dashboard.users.edit', $user->id) }}"><i
+                                                    class="fa fa-edit"></i> @lang('site.edit')</a>
+                                            <form action="{{ route('dashboard.users.destroy', $user->id) }}" method="post"
+                                                style="display: inline-block">
+                                                {{ csrf_field() }}
+                                                {{ method_field('delete') }}
+                                                <button type="submit" class="btn btn-sm btn-danger"><i
+                                                        class="fa fa-trash"></i> @lang('site.delete')</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                @endforeach
+                            </tbody>
+
+                        </table>
+
+                    @else
+
+                        <h2>@lang('site.no_data_found')</h2>
+
+                    @endif
 
                 </div>
 

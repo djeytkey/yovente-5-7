@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('123456'),
             'phone' => '0689385061',
             'is_active' => '1',
-            'is_deleted' => '1',
+            'is_deleted' => '0',
         ]);
 
         $user->attachRole('super_admin');

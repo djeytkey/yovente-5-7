@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->string('phone');
             $table->tinyInteger('is_active');
-            $table->tinyInteger('is_deleted');
+            $table->tinyInteger('is_deleted')->default('0');
             $table->timestamps();
         });
     }
